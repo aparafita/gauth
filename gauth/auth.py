@@ -174,6 +174,7 @@ class Gauth(object):
 
             kwargs['headers'] = headers # in case it didn't exist
 
+        authorize(kwargs)
         r = method(*args, **kwargs)
 
         if r.status_code == 401:
